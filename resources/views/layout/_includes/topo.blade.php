@@ -26,6 +26,11 @@
                 color: #FFF;
                 background-color: #a0d468;
             }
+            .erro {
+                border-color: #e8273b;
+                color: #FFF;
+                background-color: #ed5565;
+            }
         </style>
     </head>
     <body>

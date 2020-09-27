@@ -6,7 +6,11 @@
 <div class="container" align="center">
 
     @if(Session::has('message'))
-        <p class="alerta sucesso alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+        @if(Session::get('message') == "Senha ou email incorretos!")
+            <p class="alerta erro">{{ Session::get('message') }}</p>
+        @else
+            <p class="alerta sucesso alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+        @endif
     @endif
 
     <h3 class="center">Lista de cursos</h3>

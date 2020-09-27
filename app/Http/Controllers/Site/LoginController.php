@@ -44,8 +44,12 @@ class LoginController extends Controller
 
         $dados = $req->all();
         if(Auth::attempt( ['email'=>$dados['email'], 'password'=>$dados['senha'] ] ) ) { //Se o usuário tem acesso
+            Session::flash('message', 'Login realizado com sucesso!');
+            Session::flash('alert-class', 'alert-success');
             return redirect()->route('admin.cursos');
         }else {
+            Session::flash('message', 'Senha ou email incorretos!');
+            Session::flash('alert-class', 'alert-danger');
             return redirect()->route('site.home');
         }
     }
