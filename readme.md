@@ -19,9 +19,9 @@ Em desenvolvimento
 ## Como instalar
 
 Você vai precisar:
-- Wampserver
-- Composer
-- PHP 7
+- [Wampserver](https://www.wampserver.com/en/)
+- [Composer](https://getcomposer.org/)
+- [PHP 7](https://www.php.net/)
 
 O Wampserver vai simular um host local em sua máquina. Com ele também vem junto o MySQLWorkbench
 
