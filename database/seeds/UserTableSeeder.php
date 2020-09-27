@@ -13,8 +13,8 @@ class UserTableSeeder extends Seeder
      */
     public function run() {
         $dados = [
-            'name' => 'William', 
-            'email' => 'williamalonso@outlook.com',
+            'name' => 'Admin',
+            'email' => 'admin@teste.com',
             'password' => bcrypt('123'),
         ];
         if(User::where('email', '=', $dados['email'])->count()) {
