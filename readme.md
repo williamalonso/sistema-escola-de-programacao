@@ -45,4 +45,6 @@ Agora clone o projeto para uma pasta local de sua máquina
 Para mais imagens, acessa a pasta
 > public/img
 
+Página home:
+
 ![](public/img/home.png)
