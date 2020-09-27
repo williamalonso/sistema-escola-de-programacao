@@ -14,7 +14,21 @@ Trata-se de um sistema desenvolvido em Laravel 5.3 para fins didáticos onde o u
 
 ## Funcionalidades
 
-Em desenvolvimento
+Tela de Home
+	Na tela de home temos uma lista de cards contendo cursos de programaçao. Esses cursos são listados diretamente do banco.
+
+Tela de Login
+	Ao realizar o login, se colocar senha ou email errado, o usuário é redirecionado para a 'home' e uma flash message será exibida e desaparecerá 3 segundos depois. Se o login ocorrer com sucesso, o usuário é redirecionado para a página de admin onde será possível, adicionar, editar e remover cursos. Aqui também é exibida uma flash message de 3 segundos de duração.
+
+
+Tela de Cadastro
+	Ao cadastrar, o usuário é redirecionado para a home e uma mensagem de flash message será exibida informando que o usuário se cadastrou com sucesso e desaparecerá 3 segundos depois. Se o usuário já for cadastrado, ele vai verificar pelo email e vai atualizar o nome a senha nova que foram digitadas. Também vai redirecionar o usuário para a página home com uma flash message de sucesso de 3 segundos.
+
+Adicionar / Editar um curso
+	É possível adicionar e editar as informações de um curso. No campo "publicação", se não for selecionado o checkbox, o curso não será publicado na página Home.
+
+Deletar curso
+	Ao clicar em deletar curso, ele será deletado na tabela do banco e consequentemente da página Home.
 
 ## Como instalar
 
