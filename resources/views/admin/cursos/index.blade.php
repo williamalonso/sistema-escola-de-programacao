@@ -4,6 +4,11 @@
 
 @section('conteudo')
     <div class="container">
+
+        @if(Session::has('message'))
+            <p class="alerta sucesso alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+        @endif
+        
         <h3 class="center">Lista de cursos</h3>
         <div class="row">
             <table>

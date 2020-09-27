@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Curso;
+use Session;
 
 class CursoController extends Controller
 {
@@ -24,7 +25,7 @@ class CursoController extends Controller
         
         if(isset($dados['publicado'])) { //Se existir o dado "publicado"
             $dados['publicado'] = 'sim';
-        }else {
+        } else {
             $dados['publicado'] = 'nao';
         }
 
@@ -36,9 +37,13 @@ class CursoController extends Controller
             $nomeImagem = "imagem_" . $num . "." . $ex;
             $imagem->move($dir, $nomeImagem); //Mover o arquivo para o diretório
             $dados['imagem'] = $dir."/".$nomeImagem;
-        }
 
-        Curso::create($dados); //Para fazer esse comando, tem que definir o 'fillable' no model 'Curso.php'
+        }
+        
+        if(Curso::create($dados)) { //Para fazer esse comando, tem que definir o 'fillable' no model 'Curso.php'
+            Session::flash('message', 'Curso inserido com sucesso!');
+            Session::flash('alert-class', 'alert-success');
+        }
 
         return redirect()->route('admin.cursos');
 

@@ -13,28 +13,42 @@
     <label>Valor</label>
 </div>
 
-<div class="file-field input-field">
-    <div class="btn blue">
-        <span>Imagem</span>
-        <input type="file" name="imagem" required="required">
-    </div>
-    <div class="file-path-wrapper">
-        <input class="file-path validate" type="text">
-    </div>
-</div>
+
 
 @if(isset($registro->imagem))
-<div class="input-field">
-    <img width="150" src="{{asset($registro->imagem)}}" />
-</div>
+    <div class="input-field">
+        <img width="150" src="{{asset($registro->imagem)}}" />
+    </div>
+@else
+    <div class="file-field input-field">
+        <div class="btn blue">
+            <span>Imagem</span>
+            <input type="file" name="imagem" required="required">
+        </div>
+        <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+        </div>
+    </div>
 @endif
 
-<div class="input-field">
-    <p>
-        <label for="test5">
-            <input type="checkbox" value="true" name="publicado" id="test5" {{<?php  isset( $registro->publicado) && $registro->publicado == 'sim' ? 'checked' : '' ?>}} >
-            <span>Publicar?</span>
-        </label>
-    </p>
-    <br><br>
-</div>
+@if(isset($registro->publicado) &&  $registro->publicado == 'sim')
+    <div class="input-field">
+        <p>
+            <label for="test5">
+                <input type="checkbox" value="true" name="publicado" id="test5" checked="checked"  >
+                <span>Publicar?</span>
+            </label>
+        </p>
+        <br><br>
+    </div>
+@else
+    <div class="input-field">
+        <p>
+            <label for="test5">
+                <input type="checkbox" value="true" name="publicado" id="test5" {{<?php  isset( $registro->publicado) && $registro->publicado == 'sim' ? 'checked' : '' ?>}} >
+                <span>Publicar?</span>
+            </label>
+        </p>
+        <br><br>
+    </div>
+@endif

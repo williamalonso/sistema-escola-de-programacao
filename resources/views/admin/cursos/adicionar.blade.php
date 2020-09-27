@@ -8,8 +8,8 @@
         <div class="row">
             <form class="" action="{{route('admin.cursos.salvar')}}" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
-            @include('admin.cursos._form')
-            <button class="btn deep-orange">Salvar</button>
+                @include('admin.cursos._form')
+                <button class="btn deep-orange">Salvar</button>
             </form>
         </div>
     </div>
