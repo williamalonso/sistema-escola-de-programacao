@@ -43,8 +43,35 @@ CREATE TABLE `cursos` (
 
 LOCK TABLES `cursos` WRITE;
 /*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
-INSERT INTO `cursos` VALUES (2,'Curso de HTML5','Aprenda a criar sites','img/cursos/imagem_2732.png',200.00,'sim','2020-09-27 13:03:06','2020-09-27 13:24:02'),(3,'Curso de PHP','Aprenda a programar em PHP','img/cursos/imagem_1425.png',250.00,'sim','2020-09-27 13:12:47','2020-09-27 13:20:53'),(5,'Curso de CSS3','Deixe seu site estiloso','img/cursos/imagem_3659.png',200.00,'sim','2020-09-27 13:24:31','2020-09-27 13:24:31'),(6,'Curso de Mysql','Aprenda banco de dados','img/cursos/imagem_1653.png',250.00,'sim','2020-09-27 13:25:16','2020-09-27 13:25:41'),(7,'Curso de Laravel','Aprenda Laravel','img/cursos/imagem_3304.jpeg',250.00,'sim','2020-09-27 13:28:53','2020-09-27 13:29:16');
+INSERT INTO `cursos` VALUES (2,'Curso de HTML5','Aprenda a criar sites','img/cursos/imagem_2732.png',200.00,'sim','2020-09-27 13:03:06','2020-09-28 07:14:49'),(3,'Curso de PHP','Aprenda a programar em PHP','img/cursos/imagem_1425.png',250.00,'sim','2020-09-27 13:12:47','2020-09-27 13:20:53'),(5,'Curso de CSS3','Deixe seu site estiloso','img/cursos/imagem_3659.png',200.00,'sim','2020-09-27 13:24:31','2020-09-27 13:24:31'),(6,'Curso de Mysql','Aprenda banco de dados','img/cursos/imagem_1653.png',250.00,'sim','2020-09-27 13:25:16','2020-09-27 13:25:41'),(7,'Curso de Laravel','Aprenda Laravel','img/cursos/imagem_3304.jpeg',250.00,'sim','2020-09-27 13:28:53','2020-09-27 13:29:16');
 /*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_escolhe_curso`
+--
+
+DROP TABLE IF EXISTS `user_escolhe_curso`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `user_escolhe_curso` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `iduser` int(11) DEFAULT NULL,
+  `idcurso` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `iduser` (`iduser`),
+  KEY `idcurso` (`idcurso`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_escolhe_curso`
+--
+
+LOCK TABLES `user_escolhe_curso` WRITE;
+/*!40000 ALTER TABLE `user_escolhe_curso` DISABLE KEYS */;
+INSERT INTO `user_escolhe_curso` VALUES (1,8,2),(2,8,3),(3,8,4),(4,8,5),(5,8,6),(6,8,7);
+/*!40000 ALTER TABLE `user_escolhe_curso` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -65,7 +92,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-27 23:26:38
+-- Dump completed on 2020-09-28  3:09:08

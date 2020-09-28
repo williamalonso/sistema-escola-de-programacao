@@ -23,17 +23,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($registros as $registro)
-                        <tr>
-                            <td>{{ $registro->id }}</td>
-                            <td>{{ $registro->titulo }}</td>
-                            <td>{{ $registro->descricao }}</td>
-                            <td><img width="80" src="{{ asset($registro->imagem) }}" alt="{{ $registro->titulo }}" /></td> <!-- o asset é um helper do laravel que busca o caminho da imagem -->
-                            <td>{{ $registro->publicado }}</td>
-                            <td><a class="btn deep-orange" href="{{ route('admin.cursos.editar', $registro->id) }}">Editar</a></td> <!-- P/enviar um id, colocar a vírgula e depois fazer o $registro->id -->
-                            <td><a class="btn red" href="{{ route('admin.cursos.deletar', $registro->id) }}">Deletar</a></td>
-                        </tr>
-                    @endforeach
+                    @if(isset($registros))
+                        @foreach($registros as $registro)
+                            <tr>
+                                <td>{{ $registro->id }}</td>
+                                <td>{{ $registro->titulo }}</td>
+                                <td>{{ $registro->descricao }}</td>
+                                <td><img width="80" src="{{ asset($registro->imagem) }}" alt="{{ $registro->titulo }}" /></td> <!-- o asset é um helper do laravel que busca o caminho da imagem -->
+                                <td>{{ $registro->publicado }}</td>
+                                <td><a class="btn deep-orange" href="{{ route('admin.cursos.editar', $registro->id) }}">Editar</a></td> <!-- P/enviar um id, colocar a vírgula e depois fazer o $registro->id -->
+                                <td><a class="btn red" href="{{ route('admin.cursos.deletar', $registro->id) }}">Deletar</a></td>
+                            </tr>
+                        @endforeach
+                    @endif
                 </tbody>          
             </table>
         </div>

@@ -6,12 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Curso;
 use Session;
+use App\Assiste;
+use Auth;
 
 class CursoController extends Controller
 {
     public function index() {
-
-        $registros = Curso::all();
+        $registros = Assiste::lista_admin(Auth::user()->id);
         return view('admin.cursos.index', compact('registros'));
     }
 

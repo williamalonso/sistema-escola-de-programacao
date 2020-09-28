@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
+Route::any('/', ['as'=>'site.home', 'uses'=>'Site\HomeController@index']);
 
 Route::get('/cadastrar', ['as'=>'site.cadastrar', 'uses'=>'Site\LoginController@CadastrarNovoUsuario']);
 Route::post('/salvarusuario', ['as'=>'site.salvarusuario', 'uses'=>'Site\LoginController@SalvarNovoUsuario']);
