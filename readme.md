@@ -31,7 +31,6 @@ Deletar curso: ao clicar em deletar curso, ele será deletado na tabela do banco
 Você vai precisar:
 - [Wampserver](https://www.wampserver.com/en/)
 - [Composer](https://getcomposer.org/)
-- [PHP 7](https://www.php.net/)
 
 O Wampserver vai simular um host local em sua máquina. Com ele também vem junto o MySQLWorkbench, onde vamos importar nosso banco de dados.
 
@@ -43,13 +42,14 @@ Após baixar e instalar o Composer, verifique se ele está nas variáveis de amb
 
 Após instalar o Wampserver, abra seu navegador e digite "localhost" para ver se está tudo ok.
 
-Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o Gitbash na pasta que você acabou de clona e digite o comando:
+Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o Gitbash na pasta que você acabou de clonar e digite o comando:
 > composer install
 
 Agora, acesse este [tutorial](https://www.visualdicas.com.br/index.php/tools/web-server/4-como-alterar-um-servidor-virtual-wamp-server) para configurar o virtual host do Wamp.
 
 Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-escola-programacao" localizado na pasta
 > public/dump
+
 Nesse arquivo temos 5 cursos de exemplo e 1 conta de usuário que você pode usar para fazer login no sistema, basta digitar "admin@teste.com" no campo email e "123" no campo senha.
 
 Depois de configurado o Virtual host, acesse "http://localhost/projeto-escola-de-programacao/" e clique em "public".
