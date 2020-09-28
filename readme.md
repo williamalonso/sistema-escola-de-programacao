@@ -34,7 +34,7 @@ Você vai precisar:
 
 O Wampserver vai simular um host local em sua máquina. Com ele também vem junto o MySQLWorkbench, onde vamos importar nosso banco de dados.
 
-O Composer é um gerenciador de dependências do PHP. Nós vamos usá-lo para instalar o Laravel.
+O Composer é um gerenciador de dependências do PHP.
 
 Para instalar o Wampserver siga este [tutorial](https://www.devmedia.com.br/instalacao-do-wampserver/25871)
 
@@ -44,6 +44,7 @@ Após instalar o Wampserver, abra seu navegador e digite "localhost" para ver se
 
 Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o Gitbash na pasta que você acabou de clonar e digite o comando:
 > composer install
+
 
 Agora, acesse este [tutorial](https://www.visualdicas.com.br/index.php/tools/web-server/4-como-alterar-um-servidor-virtual-wamp-server) para configurar o virtual host do Wamp.
 
