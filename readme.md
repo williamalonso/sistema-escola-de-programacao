@@ -17,6 +17,7 @@ Trata-se de um sistema desenvolvido em Laravel 5.3 para fins didáticos onde o u
 Tela de Home: na tela de home temos uma lista de cards contendo cursos de programaçao. Esses cursos são listados diretamente do banco.
 
 Tela de Login: ao realizar o login, se colocar senha ou email errado, o usuário é redirecionado para a 'home' e uma flash message será exibida e desaparecerá 3 segundos depois. Se o login ocorrer com sucesso, o usuário é redirecionado para a página de admin onde será possível adicionar, editar e remover cursos. Aqui também é exibida uma flash message de 3 segundos de duração.
+Se você realizar um novo cadastro e depois fizer o login, a página de admin não vai listar nenhum curso pois esse novo usuário ainda não adicionou nenhum curso. Ou seja, os cursos são exibidos de acordo com cada usuário logado no sistema.
 
 Tela de admin: na página de admin o menu é alterado, contendo a opção "Cursos" e o nome da pessoa logada no sistema.
 
