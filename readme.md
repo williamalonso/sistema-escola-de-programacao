@@ -10,7 +10,7 @@ Este readme está dividido em:
 
 ## Descrição
 
-Trata-se de um sistema desenvolvido em Laravel 5.3 para fins didáticos onde o usuário pode fazer login/cadastro, sendo direcionado para uma área protegida por autenticação onde ele pode inserir, alterar e deletar cursos de programação.
+Trata-se de um sistema desenvolvido em Laravel 5.3 para fins didáticos onde o usuário pode fazer login/cadastro, sendo direcionado para uma área protegida por autenticação onde ele pode inserir, alterar e deletar cursos de programação. O sistema é responsivo, fazendo uso do framework Materialize.
 
 ## Funcionalidades
 
