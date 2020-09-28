@@ -34,15 +34,29 @@ Você vai precisar:
 - [PHP 7](https://www.php.net/)
 
 O Wampserver vai simular um host local em sua máquina. Com ele também vem junto o MySQLWorkbench, onde vamos importar nosso banco de dados.
-O Composer é um gerenciador de dependências do PHP.
 
-Após instalar o Composer, verifique se ele está nas variáveis de ambiente do sistema. Para verificar isso, abra o cmd digite "composer" e dê enter. Se aparecer uma tela com a versão e os comandos, ele já está configurado. Caso contrário: no Windows 10, basta abrir o Menu Iniciar e digitar "variáveis". Depois clique em "Variáveis de ambiente"; depois em "Variáveis do sistema" dê um duplo clique em "Path", clique em "Novo" e digite o local onde ele foi instalado, por exemplo: "C:\ProgramData\ComposerSetup\bin". Depois basta clicar em 'ok' ou 'aplicar'.
+O Composer é um gerenciador de dependências do PHP. Nós vamos usá-lo para instalar o Laravel.
 
-Agora clone o projeto para uma pasta local de sua máquina
+Para instalar o Wampserver siga este [tutorial](https://www.devmedia.com.br/instalacao-do-wampserver/25871)
+
+Após baixar e instalar o Composer, verifique se ele está nas variáveis de ambiente do sistema. Para verificar isso, abra o cmd, digite "composer" e dê enter. Se aparecer uma tela com a versão e os comandos, ele já está configurado. Caso contrário: no Windows 10, basta abrir o Menu Iniciar e digitar "variáveis". Depois clique em "Variáveis de ambiente"; depois em "Variáveis do sistema" dê um duplo clique em "Path", clique em "Novo" e digite o local onde ele foi instalado, por exemplo: "C:\ProgramData\ComposerSetup\bin". Depois basta clicar em 'ok' ou 'aplicar'.
+
+Após instalar o Wampserver, abra seu navegador e digite "localhost" para ver se está tudo ok.
+
+Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o Gitbash na pasta que você acabou de clona e digite o comando:
+> composer install
+
+Agora, acesse este [tutorial](https://www.visualdicas.com.br/index.php/tools/web-server/4-como-alterar-um-servidor-virtual-wamp-server) para configurar o virtual host do Wamp.
+
+Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-escola-programacao" localizado na pasta
+> public/dump
+Nesse arquivo temos 5 cursos de exemplo e 1 conta de usuário que você pode usar para fazer login no sistema, basta digitar "admin@teste.com" no campo email e "123" no campo senha.
+
+Depois de configurado o Virtual host, acesse "http://localhost/projeto-escola-de-programacao/" e clique em "public".
 
 ## Imagem do Projeto
 
-Para mais imagens, acessa a pasta
+Para mais imagens, acesse a pasta
 > public/img
 
 Página home:
