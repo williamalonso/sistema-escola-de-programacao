@@ -43,7 +43,7 @@ Após baixar e instalar o Composer, verifique se ele está nas variáveis de amb
 
 Após instalar o Wampserver, abra seu navegador e digite "localhost" para ver se está tudo ok.
 
-Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o Gitbash na pasta que você acabou de clonar e digite o comando:
+Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o terminal na pasta que você acabou de clonar e digite o comando:
 > composer install
 
 
@@ -54,7 +54,7 @@ Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-escola-program
 
 Nesse arquivo temos 5 cursos de exemplo e 1 conta de usuário que você pode usar para fazer login no sistema, basta digitar "admin@teste.com" no campo email e "123" no campo senha.
 
-Depois de configurado o Virtual host, acesse "http://localhost/projeto-escola-de-programacao/" e clique em "public".
+Depois de configurar o Virtual host e de importar o banco, acesse "http://localhost/projeto-escola-de-programacao/" e clique em "public".
 
 ## Imagem do Projeto
 
