@@ -10,7 +10,7 @@ Este readme está dividido em:
 
 ## Descrição
 
-Trata-se de um sistema desenvolvido em Laravel 5.3 para fins didáticos onde o usuário pode fazer login/cadastro, sendo direcionado para uma área protegida por autenticação onde ele pode inserir, alterar e deletar cursos de programação. O sistema é responsivo, fazendo uso do framework Materialize.
+Trata-se de um sistema desenvolvido em Laravel 5.3 para fins didáticos onde o usuário pode fazer login/cadastro, sendo direcionado para uma área protegida por autenticação onde ele pode inserir, alterar e deletar cursos de programação. O sistema é responsivo, fazendo uso do framework Materialize. As senhas são criptografadas.
 
 ## Funcionalidades
 
@@ -21,7 +21,7 @@ Se você realizar um novo cadastro e depois fizer o login, a página de admin n�
 
 Tela de admin: na página de admin o menu é alterado, contendo a opção "Cursos" e o nome da pessoa logada no sistema.
 
-Tela de Cadastro de usuário: ao cadastrar, o usuário é redirecionado para a home e uma mensagem de flash message será exibida informando que o usuário se cadastrou com sucesso e desaparecerá 3 segundos depois. Se o usuário já for cadastrado, ele vai verificar pelo email e vai atualizar o nome a senha nova que foram digitadas. Também vai redirecionar o usuário para a página home com uma flash message de sucesso de 3 segundos.
+Tela de Cadastro de usuário: ao cadastrar, o usuário é redirecionado para a home e uma mensagem de flash message será exibida informando que o usuário se cadastrou com sucesso e desaparecerá 3 segundos depois. Se o usuário já for cadastrado, ele vai verificar pelo email e vai atualizar o nome a senha nova que foram digitadas. Também vai redirecionar o usuário para a página home com uma flash message de sucesso de 3 segundos. As senhas são criptografadas.
 
 Adicionar / Editar um curso: após logado, é possível adicionar e editar cursos e as informações do curso. No campo "publicação", se não for selecionado o checkbox, o curso não será publicado na página Home. Se for selecionado, ele será postado na página Home.
 
