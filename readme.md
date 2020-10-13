@@ -46,18 +46,21 @@ Após instalar o Wampserver, abra seu navegador e digite "localhost" para ver se
 Clone o projeto para sua máquina, na pasta "C:\wamp64\www". Abra o terminal na pasta que você acabou de clonar e digite o comando:
 > composer install
 
-Se der um erro na exibição da página, renomeie o arquivo ".env.example" para ".env" e digite o comando (na pasta raíz do projeto):
-> php artisan key:generate
-
 
 Agora, acesse este [tutorial](https://www.visualdicas.com.br/index.php/tools/web-server/4-como-alterar-um-servidor-virtual-wamp-server) para configurar o virtual host do Wamp.
 
 Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-escola-programacao" localizado na pasta
 > public/dump
 
-Nesse arquivo temos 5 cursos de exemplo e 1 conta de usuário que você pode usar para fazer login no sistema, basta digitar "admin@teste.com" no campo email e "123" no campo senha. Se você renomeou o ".env.example" para ".env", digite neste ".env" o seguinte: "DB_DATABASE=son_laravel_55", "DB_USERNAME=root", "DB_PASSWORD=".
+Nesse arquivo temos 5 cursos de exemplo e 1 conta de usuário que você pode usar para fazer login no sistema, basta digitar "admin@teste.com" no campo email e "123" no campo senha. 
 
 Depois de configurar o Virtual host e de importar o banco, acesse "http://localhost/projeto-escola-de-programacao/" e clique em "public".
+
+Se der um erro na exibição da página, renomeie o arquivo ".env.example" para ".env" e digite o comando (na pasta raíz do projeto):
+> php artisan key:generate
+
+
+Se você renomeou o ".env.example" para ".env", digite neste ".env" o seguinte: "DB_DATABASE=son_laravel_55", "DB_USERNAME=root", "DB_PASSWORD=".
 
 ## Imagem do Projeto
 
