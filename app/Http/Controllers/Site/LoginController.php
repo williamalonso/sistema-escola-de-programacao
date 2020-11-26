@@ -20,18 +20,19 @@ class LoginController extends Controller
 
     public function SalvarNovoUsuario(Request $req) {
 
-        $user = $req->except('_token', '_method');
+        User::atualiza_id(); //reseta o auto_increment do "id"
 
+        $user = $req->except('_token', '_method');
+        
         $user['name'] = $req->name;
         $user['email'] = $req->email;
         $user['password'] = bcrypt($req->password);
         
-        if(User::where('email', '=', $user['email'])->count()) {
-            User::where('email', '=', $user['email'])->update($user);
+        if(User::where('email', '=', $user['email'])->count()) { // verifica se o email já está cadastrado
+            User::where('email', '=', $user['email'])->update($user); // se estiver cadastrado, atualiza com a nova senha digitada
             Session::flash('message', 'Login alterado com sucesso!');
             Session::flash('alert-class', 'alert-success');
         } else {
-            //$user->save();
             User::create($user);
             Session::flash('message', 'Conta criada com sucesso!');
             Session::flash('alert-class', 'alert-success');

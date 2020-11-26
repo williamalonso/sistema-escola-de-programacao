@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use DB;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -19,8 +19,9 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
-    public static function cadastrar(){
-        
+    public static function atualiza_id() {
+        $conn = DB::connection('mysql')->select("ALTER TABLE users AUTO_INCREMENT = 0"); //reseta o auto_increment do "id"
+        return $conn;
     }
 
     /**

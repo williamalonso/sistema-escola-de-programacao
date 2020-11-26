@@ -61,7 +61,7 @@ CREATE TABLE `user_escolhe_curso` (
   PRIMARY KEY (`id`),
   KEY `iduser` (`iduser`),
   KEY `idcurso` (`idcurso`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `user_escolhe_curso` (
 
 LOCK TABLES `user_escolhe_curso` WRITE;
 /*!40000 ALTER TABLE `user_escolhe_curso` DISABLE KEYS */;
-INSERT INTO `user_escolhe_curso` VALUES (1,8,2),(2,8,3),(3,8,4),(4,8,5),(5,8,6),(6,8,7);
+INSERT INTO `user_escolhe_curso` VALUES (1,8,2),(2,8,3),(3,8,5),(4,8,6),(5,8,7);
 /*!40000 ALTER TABLE `user_escolhe_curso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +101,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (8,'Usuario Admin','admin@teste.com',NULL,'$2y$10$R9LZ8WeSwCglJhkzLPXVtOXAMXExh8H31YIK5A46KE6YChLEyvmYK',NULL,'2020-09-28 04:40:15','2020-09-28 04:40:15');
+INSERT INTO `users` VALUES (8,'Usuario Admin','admin@teste.com',NULL,'$2y$10$R9LZ8WeSwCglJhkzLPXVtOXAMXExh8H31YIK5A46KE6YChLEyvmYK',NULL,'2020-09-28 04:40:15','2020-09-28 04:40:15'),(9,'teste','teste@mail.com',NULL,'$2y$10$pFA.Y2N4eA5uqgNV22NcAurpcifINf/TfPzV8KJoVAdsr.qE.G6l.',NULL,'2020-11-26 06:59:43','2020-11-26 06:59:43');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -114,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-28  3:09:08
+-- Dump completed on 2020-11-26  2:16:01

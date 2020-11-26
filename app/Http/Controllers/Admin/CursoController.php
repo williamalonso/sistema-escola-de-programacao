@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Curso;
+use App\UserEscolheCurso;
 use Session;
 use App\Assiste;
 use Auth;
@@ -22,6 +23,9 @@ class CursoController extends Controller
 
     public function salvar(Request $req) {
 
+        Curso::atualiza_id(); // reseta o id da tabela 'cursos'
+        UserEscolheCurso::atualiza_id();
+        
         $dados = $req->all(); //Vai trazer todos os dados da requisição
         
         if(isset($dados['publicado'])) { //Se existir o dado "publicado"
@@ -45,6 +49,12 @@ class CursoController extends Controller
             Session::flash('message', 'Curso inserido com sucesso!');
             Session::flash('alert-class', 'alert-success');
         }
+
+        $idcurso = Curso::pega_ultimo_id(); // pega último id da tabela de cursos
+
+        $x = Auth::user()->id; // usuário logado
+        $y = $idcurso['0']->id; // valor do maior id da tabela de cursos
+        UserEscolheCurso::insert_join($x, $y); // insere na tabela de join o usuário logado com o curso que ele acabou de criar
 
         return redirect()->route('admin.cursos');
 
@@ -84,6 +94,9 @@ class CursoController extends Controller
 
     public function deletar($id) {
         Curso::find($id)->delete();
+        Curso::atualiza_id(); // reseta o id da tabela 'cursos'
+        UserEscolheCurso::deleta($id); // além de deletar o curso na tabela de cursos, eu preciso deletá-lo também na tabela que faz o join
+        UserEscolheCurso::atualiza_id(); // reseta o id da tabela de join
         return redirect()->route('admin.cursos');
     }
 }

@@ -12,18 +12,31 @@ class Assiste extends Model
 	protected $table = "user_escolhe_curso";
     protected $fillable = ['id', 'iduser', 'idcurso',];
 
-    public static function conecta() {
+    public static function index() {
 
-    	$conn = DB::table('user_escolhe_curso')
-    						->select('name', 'titulo', 'publicado', 'imagem', 'descricao')
+        $conn = DB::table('user_escolhe_curso')
+    					    ->select('name', 'titulo', 'publicado', 'imagem', 'descricao')
     						->from('user_escolhe_curso')
     						->join('users', 'users.id', '=', 'user_escolhe_curso.iduser')
-    						->join('cursos', 'cursos.id', '=', 'user_escolhe_curso.idcurso')
-    						->paginate(3);
+                            ->join('cursos', 'cursos.id', '=', 'user_escolhe_curso.idcurso')
+                            ->paginate(3);
+    	return $conn;
+    }
+
+    public static function conecta($id) {
+
+        $conn = DB::table('user_escolhe_curso')
+    					    ->select('name', 'titulo', 'publicado', 'imagem', 'descricao')
+    						->from('user_escolhe_curso')
+    						->join('users', 'users.id', '=', 'user_escolhe_curso.iduser')
+                            ->join('cursos', 'cursos.id', '=', 'user_escolhe_curso.idcurso')
+                            ->where('users.id', '=', $id)
+                            ->paginate(3);
     	return $conn;
     }
 
     public static function lista_admin($id) {
+        
         $conn = DB::table('user_escolhe_curso')
                             ->select('name', 'titulo', 'publicado', 'imagem', 'descricao', 'valor', 'cursos.id')
                             ->from('user_escolhe_curso')
