@@ -12,13 +12,14 @@ class Assiste extends Model
 	protected $table = "user_escolhe_curso";
     protected $fillable = ['id', 'iduser', 'idcurso',];
 
-    public static function index() {
+    public static function index($id) {
 
         $conn = DB::table('user_escolhe_curso')
     					    ->select('name', 'titulo', 'publicado', 'imagem', 'descricao')
     						->from('user_escolhe_curso')
     						->join('users', 'users.id', '=', 'user_escolhe_curso.iduser')
                             ->join('cursos', 'cursos.id', '=', 'user_escolhe_curso.idcurso')
+                            ->where('users.id', '=', $id)
                             ->paginate(3);
     	return $conn;
     }

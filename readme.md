@@ -52,7 +52,7 @@ Agora, acesse este [tutorial](https://www.visualdicas.com.br/index.php/tools/web
 Abra seu MySQLWorkbench e importe o arquivo de dump chamado "dump-escola-programacao" localizado na pasta
 > public/dump
 
-Nesse arquivo temos 5 cursos de exemplo e 1 conta de usuário que você pode usar para fazer login no sistema, basta digitar "admin@teste.com" no campo email e "123" no campo senha. 
+Nesse arquivo temos 5 cursos de exemplo e 2 contas de usuário que você pode usar para fazer login no sistema, basta digitar "admin@teste.com" no campo email e "123" no campo senha para o primeiro usuário e "teste@mail.com" e "123" para o segundo usuário.
 
 Depois de configurar o Virtual host e de importar o banco, acesse "http://localhost/projeto-escola-de-programacao/" e clique em "public".
 
